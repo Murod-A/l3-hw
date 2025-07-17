@@ -91,9 +91,9 @@ const Layout = () => {
 					alt=''
 					className='flex md:hidden w-[97%] m-auto max-h-[80px]'
 				/>
-				<aside className='flex flex-col lg:flex-row m-auto w-[97%] gap-y-[5vh]'>
-					<div className='hidden lg:flex w-[750px] flex-wrap gap-[3%] gap-y-[3vh]'>
-						<div className='w-[300px] h-[280px] bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
+				<aside className='flex flex-col lg:flex-row m-auto w-[97%] gap-y-[5vh] gap-[20px]'>
+					<div className='hidden lg:grid grid-cols-2 gap-[3%] gap-y-[3vh]'>
+						<div className='bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
 							<div className='flex items-center gap-[110px]'>
 								<img src={insta} alt='' />
 								<img src={arrow} alt='' />
@@ -105,7 +105,7 @@ const Layout = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[300px] h-[280px] bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
+						<div className='bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
 							<div className='flex items-center gap-[110px]'>
 								<img src={twitter} alt='' />
 								<img src={arrow} alt='' />
@@ -117,7 +117,7 @@ const Layout = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[300px] h-[280px] bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
+						<div className='bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
 							<div className='flex items-center gap-[110px]'>
 								<img src={b} alt='' />
 								<img src={arrow} alt='' />
@@ -129,7 +129,7 @@ const Layout = () => {
 								</p>
 							</div>
 						</div>
-						<div className='w-[300px] h-[280px] bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
+						<div className='bg-[#1A1A1A] rounded-xl flex flex-col justify-center items-center gap-[40px] p-[30px]'>
 							<div className='flex items-center gap-[110px]'>
 								<img src={be} alt='' />
 								<img src={arrow} alt='' />
