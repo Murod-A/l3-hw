@@ -1,10 +1,18 @@
 import React from 'react'
 
-// ABDUMAJID
+
 
 const Contact = () => {
   return (
-	 <div>Contact</div>
+	 <div>
+    <section className='mt-10'>
+            <ContactStats/>
+           </section>
+    
+           <section className='mt-10'>
+            <ContactForm/>
+           </section>
+   </div>
   )
 }
 
