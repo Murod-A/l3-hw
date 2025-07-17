@@ -319,7 +319,7 @@ const Careers = () => {
       <h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%] mt-[100px]'><b>Frequently Asked Questions</b></h1>
       <br/>
       <div className='flex justify-around items-center flex-wrap gap-[25px]'>
-        <div className='w-[48%]'>
+        <div className='lg:w-[48%]'>
           <div className='bg-[#1A1A1A] p-[25px] rounded-[15px] w-[100%] flex justify-between items-start'>
             <div>
               <p className='text-[20px]'>How long does it take to complete a web development project?</p>
@@ -358,7 +358,7 @@ const Careers = () => {
           </div>
         </div>
 
-        <div className='w-[48%] bg-[#1A1A1A] p-[25px] rounded-[15px]'>
+        <div className='w-[100%] lg:w-[48%] bg-[#1A1A1A] p-[25px] rounded-[15px]'>
           <p className='text-[22px]'>Ask your question</p>
           <br/><hr className='text-[#262626]'/><br/>
           <label className='text-[20px]'>Name</label>
