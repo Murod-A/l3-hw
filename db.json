@@ -1,9 +1,40 @@
 {
   "data": [
     {
-      "id": "1",
-      "name": "murod",
-      "age": "17"
+      "name": "NexGen turned our business around!",
+      "lorem": "Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!",
+      "img": "./img1 (2).png",
+      "nameuser": "Sarah Thompson",
+      "comp": "CEO of BlueBloom",
+      "status": true,
+      "id": "2410"
+    },
+    {
+      "name": "NexGen turned our business around!",
+      "lorem": "Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!",
+      "nameuser": "Wade Warren",
+      "comp": "Art Director",
+      "status": true,
+      "img": "./img1 (3).png",
+      "id": "2420"
+    },
+    {
+      "name": "Working with NexGen was a pleasure.",
+      "lorem": "Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!",
+      "img": "./img1 (4).png",
+      "nameuser": "Lisa Williams",
+      "comp": "CEO Of HealthTech",
+      "status": true,
+      "id": "2430"
+    },
+    {
+      "name": "NexGen's web design team brought",
+      "lorem": "Their digital marketing strategies helped us reach new customers and increase our revenue by 30% within just a few months. Highly recommended!",
+      "img": "./img1 (1).png",
+      "nameuser": "Jennifer Lee",
+      "comp": "COO of Foodie Haven",
+      "status": false,
+      "id": "2440"
     }
   ]
 }
