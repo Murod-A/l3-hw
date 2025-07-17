@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./career.css"
 import start from "./images/Button (2).png"
 import ins from "./images/Button (3).png"
@@ -9,8 +9,32 @@ import user1 from "./images/Image (45).png"
 import right from "./images/Button (6).png"
 import minus from "./images/Button (7).png"
 import plus from "./images/Button (8).png"
+import { useTodoStore } from '../../store/store_aliakbar'
 
 const Careers = () => {
+
+  let {users, get, addUser, deleteUser, editUser} = useTodoStore()  
+
+  useEffect(() => {
+    get()
+  }, [])
+
+  let [addName, setAddName] = useState("")
+  function addNewUsers() {
+    let newUser = {
+      name: addName,
+    }
+    addUser(newUser)
+    setAddName("")
+  }
+
+  let [editName, setEditName] = useState("")
+  let [userX, setUserX] = useState(null)
+  function openEdit(el) {
+    setEditName(el.name)
+    setUserX(el)
+  }
+
   return (
 	 <div className='mt-[100px]'>
     <div className='flex justify-around items-center flex-wrap gap-[25px]'>
@@ -132,6 +156,39 @@ const Careers = () => {
           <br/><br/>
           <button className='w-[100%] h-[50px] text-black bg-[#CE7D63] rounded-[10px]'>Apply NoW</button>
         </div>
+      </div>
+    </div>
+
+    <div className='w-[97%] m-auto border p-[10px] rounded-[15px] border-[#1F1F1F] mt-[100px]'>
+      <h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%]'><b>To-do List</b></h1>
+
+      <div className='mt-[50px] flex items-center justify-around'>
+        <div className='flex items-center gap-[25px]'>
+          <input type="text" value={addName} onChange={(e) => setAddName(e.target.value)} className='border-[2px] border-[#1F1F1F] h-[50px] w-[300px] rounded-[10px]' placeholder=' Add Name'/>
+
+          <button onClick={() => addNewUsers()} className='border-[2px] h-[50px] w-[120px] rounded-[10px] border-[#1F1F1F] text-[#8e8e8e]'>Add</button>
+        </div>
+
+        <div className='flex items-center gap-[25px]'>
+          <input type="text" value={editName} onChange={(e) => setEditName(e.target.value)} className='border-[2px] border-[#1F1F1F] h-[50px] w-[300px] rounded-[10px]' placeholder=' Edit Name'/>
+
+          <button className='border-[2px] h-[50px] w-[120px] rounded-[10px] border-[#1F1F1F] text-[#8e8e8e]' onClick={() => editUser(userX, editName)}>Save</button>
+        </div>
+      </div>
+
+      <div className='mt-[50px] flex justify-around items-center flex-wrap gap-[25px]'>
+        {users.map((el) => {
+          return (
+            <div className='lg:w-[24%] bg-[#1A1A1A] p-[25px] rounded-[15px] text-center' key={el.id}>
+              <h1 className='text-[30px]'><b>{el.name}</b></h1>
+              <br/>
+              <div className='flex justify-between items-center'>
+                <button onClick={() => deleteUser(el.id)} className='text-red-700 text-[20px]'>delete</button>
+                <button className='text-[20px]' onClick={() => openEdit(el)}>Edit</button>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
 
@@ -319,7 +376,7 @@ const Careers = () => {
       <h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%] mt-[100px]'><b>Frequently Asked Questions</b></h1>
       <br/>
       <div className='flex justify-around items-center flex-wrap gap-[25px]'>
-        <div className='w-[48%]'>
+        <div className='lg:w-[48%]'>
           <div className='bg-[#1A1A1A] p-[25px] rounded-[15px] w-[100%] flex justify-between items-start'>
             <div>
               <p className='text-[20px]'>How long does it take to complete a web development project?</p>
@@ -358,7 +415,7 @@ const Careers = () => {
           </div>
         </div>
 
-        <div className='w-[48%] bg-[#1A1A1A] p-[25px] rounded-[15px]'>
+        <div className='w-[100%] lg:w-[48%] bg-[#1A1A1A] p-[25px] rounded-[15px]'>
           <p className='text-[22px]'>Ask your question</p>
           <br/><hr className='text-[#262626]'/><br/>
           <label className='text-[20px]'>Name</label>
