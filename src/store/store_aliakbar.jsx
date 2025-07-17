@@ -1,5 +1,4 @@
 import { create } from 'zustand'
-
 let API = 'http://localhost:3000/data'
 
 export let useTodoStore = create(set => ({
