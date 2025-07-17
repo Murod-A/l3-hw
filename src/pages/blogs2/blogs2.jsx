@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import ArticleHeader from './components/art'
+import ArticleHeader from '../../components/art'
 
-import { useCrudStore } from './storeMajid'
+import { useCrudStore } from '../../store/storeMajid'
 import {Checkbox,Modal} from 'antd'
 import { useState } from 'react'
-import ContactStats from './components/contactState'
-import ContactForm from './components/contactForm'
+import ContactStats from '../../components/contactState'
+import ContactForm from '../../components/contactForm'
 
 const Blogs2 = () => {
   const {product,get,deleteP,update,changeStatus} = useCrudStore()

@@ -9,7 +9,7 @@ import user1 from './images/Image (45).png'
 import right from './images/Button (6).png'
 import minus from './images/Button (7).png'
 import plus from './images/Button (8).png'
-import useTodoStore from '../../store/store_aliakbar'
+import {useTodoStore} from '../../store/store_aliakbar'
 
 const Careers = () => {
 	let { users, get, addUser, deleteUser, editUser } = useTodoStore()
