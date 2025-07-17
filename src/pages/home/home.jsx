@@ -7,6 +7,7 @@ import Card4 from '../about/component/Card4'
 import Card3 from '../about/component/Card3'
 import img2 from '../../assets/assets_sobir/img1 (7).png'
 import img3 from '../../assets/assets_sobir/img1 (6).png'
+import follow1 from '../../assets/assets_murod/Sub Container (2).png'
 
 //MUROD
 
@@ -17,8 +18,8 @@ const Home = () => {
 				<div className='lg:w-[60%]'>
 					<div className='lg:flex gap-[10px] items-center'>
 						<p className='font-black text-3xl lg:text-5xl'>
-							Empowering Your <br />
-							Digital Vision
+							Digital Solutions <br />
+							That Drive Success
 						</p>
 						<img src={img} alt='' className='w-[200px]' />
 					</div>
@@ -29,8 +30,9 @@ const Home = () => {
 						ensures that we deliver exceptional results that elevate your online
 						presence.
 					</p>
+					<img src={follow1} alt='' className='h-[80px]' />
 				</div>
-				<div>
+				<div className='w-[30%]'>
 					<img src={mainbg} alt='' />
 				</div>
 			</div>
