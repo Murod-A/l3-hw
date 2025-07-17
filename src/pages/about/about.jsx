@@ -6,6 +6,7 @@ import img1 from '../../assets/assets_sobir/img1 (2).png'
 import img2 from '../../assets/assets_sobir/img1 (7).png'
 import img3 from '../../assets/assets_sobir/img1 (6).png'
 import Card3 from './component/Card3'
+import Card4 from './component/Card4'
 
 //SOBIR
 
@@ -26,6 +27,7 @@ const About = () => {
       </div>
       <Card/>
       <Card2 img={img2} inn={img3}/>
+      <Card4/>
       <Card3/>
     </div>
   )
