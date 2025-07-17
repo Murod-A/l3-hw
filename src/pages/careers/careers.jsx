@@ -160,7 +160,7 @@ const Careers = () => {
     </div>
 
     <div className='w-[97%] m-auto border p-[10px] rounded-[15px] border-[#1F1F1F] mt-[100px]'>
-      <h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%]'><b>To-do List</b></h1>
+      <h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%]'><b>To-Do List</b></h1>
 
       <div className='mt-[50px] flex items-center justify-around'>
         <div className='flex items-center gap-[25px]'>
