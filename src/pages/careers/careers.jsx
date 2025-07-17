@@ -1,23 +1,47 @@
-import React from 'react'
-import "./career.css"
-import start from "./images/Button (2).png"
-import ins from "./images/Button (3).png"
-import ukol from "./images/Icon Container (4).png"
-import up from "./images/Button (4).png"
-import down from "./images/Button (5).png"
-import user1 from "./images/Image (45).png"
-import right from "./images/Button (6).png"
-import minus from "./images/Button (7).png"
-import plus from "./images/Button (8).png"
+import React, { useEffect, useState } from 'react'
+import './career.css'
+import start from './images/Button (2).png'
+import ins from './images/Button (3).png'
+import ukol from './images/Icon Container (4).png'
+import up from './images/Button (4).png'
+import down from './images/Button (5).png'
+import user1 from './images/Image (45).png'
+import right from './images/Button (6).png'
+import minus from './images/Button (7).png'
+import plus from './images/Button (8).png'
+import useTodoStore from '../../store/store_aliakbar'
 
 const Careers = () => {
-  return (
-	 <div className='mt-[100px]'>
-    <div className='flex justify-around items-center flex-wrap gap-[25px]'>
-      <div className='bg-[#1A1A1A] flex items-start gap-[10px] p-[50px] lg:h-[400px] lg:w-[1000px] rounded-[15px] flex-wrap text-center lg:text-start'>
-        <h1 className='text-[30px] lg:text-[60px] m-auto'><b>Unlock Your Potential in the Digital World</b></h1>
-        <img src={start} alt="" className='m-auto'/>
-      </div>
+	let { users, get, addUser, deleteUser, editUser } = useTodoStore()
+
+	useEffect(() => {
+		get()
+	}, [])
+
+	let [addName, setAddName] = useState('')
+	function addNewUsers() {
+		let newUser = {
+			name: addName,
+		}
+		addUser(newUser)
+		setAddName('')
+	}
+
+	let [editName, setEditName] = useState('')
+	let [userX, setUserX] = useState(null)
+	function openEdit(el) {
+		setEditName(el.name)
+		setUserX(el)
+	}
+	return (
+		<div className='mt-[100px]'>
+			<div className='flex justify-around items-center flex-wrap gap-[25px]'>
+				<div className='bg-[#1A1A1A] flex items-start gap-[10px] p-[50px] lg:h-[400px] lg:w-[1000px] rounded-[15px] flex-wrap text-center lg:text-start'>
+					<h1 className='text-[30px] lg:text-[60px] m-auto'>
+						<b>Unlock Your Potential in the Digital World</b>
+					</h1>
+					<img src={start} alt='' className='m-auto' />
+				</div>
 
 				<div className='bg-[#1A1A1A] p-[30px] lg:w-[400px] rounded-[15px]'>
 					<h3 className='text-[22px]'>
@@ -177,25 +201,42 @@ const Careers = () => {
 								<p className='text-[20px] lg:text-[30px]'>Web Designer</p>
 							</div>
 
-            <div className='flex items-center gap-[15px]'>
-              <img src={up} alt="" />
-              <p className='text-[16px] lg:text-[25px] text-[#B3B3B2]'>View Details</p>
-            </div>
-          </div>
-          <br/><br/>
-          <div className='flex justify-around lg:justify-between items-center flex-wrap gap-[15px]'>
-            <button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>Experience</button>
-            <button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>Experience</button>
-            <button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>Experience</button>
-          </div>
-          <br/><br/>
-          <p className='text-[30px]'>Skills</p>
-          <p>Proficiency in Adobe Creative Suite (Photoshop, Illustrator, etc.), strong understanding of UI/UX design principles, responsive design expertise.</p>
-          <br/><br/>
-          <button className='w-[100%] h-[50px] text-black bg-[#CE7D63] rounded-[10px]'>Apply NoW</button>
-        </div>
-      </div>
-    </div>
+							<div className='flex items-center gap-[15px]'>
+								<img src={up} alt='' />
+								<p className='text-[16px] lg:text-[25px] text-[#B3B3B2]'>
+									View Details
+								</p>
+							</div>
+						</div>
+						<br />
+						<br />
+						<div className='flex justify-around lg:justify-between items-center flex-wrap gap-[15px]'>
+							<button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>
+								Experience
+							</button>
+							<button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>
+								Experience
+							</button>
+							<button className='bg-[#1F1F1F] rounded-[10px] px-[15px] py-[5px]'>
+								Experience
+							</button>
+						</div>
+						<br />
+						<br />
+						<p className='text-[30px]'>Skills</p>
+						<p>
+							Proficiency in Adobe Creative Suite (Photoshop, Illustrator,
+							etc.), strong understanding of UI/UX design principles, responsive
+							design expertise.
+						</p>
+						<br />
+						<br />
+						<button className='w-[100%] h-[50px] text-black bg-[#CE7D63] rounded-[10px]'>
+							Apply NoW
+						</button>
+					</div>
+				</div>
+			</div>
 
 			<div className='w-[97%] m-auto border p-[10px] rounded-[15px] border-[#1F1F1F] mt-[100px]'>
 				<h1 className='text-[30px] lg:text-[50px] bg-[#1A1A1A] rounded-[15px] px-[25px] py-[20px] w-[100%]'>
