@@ -64,7 +64,7 @@ const Layout = () => {
 			<main>
 				<Outlet />
 			</main>
-			<footer className='flex flex-col gap-y-[3vh] pb-[5vh]'>
+			<footer className='flex flex-col gap-y-[3vh] pb-[5vh] mt-[10vh]'>
 				<div className='bg-[#CE7D63] w-[97%] flex flex-col lg:flex-row m-auto rounded-xl items-center justify-between py-[5vh] gap-y-[2vh] px-[5%]'>
 					<div className='lg:w-[900px]'>
 						<h1 className='text-[#0F0F0F] text-[30px] font-bold'>
