@@ -7,6 +7,8 @@ import Card4 from '../about/component/Card4'
 import Card3 from '../about/component/Card3'
 import img2 from '../../assets/assets_sobir/img1 (7).png'
 import img3 from '../../assets/assets_sobir/img1 (6).png'
+import follow1 from '../../assets/assets_murod/Sub Container (2).png'
+
 // MUROD
 
 const Services = () => {
@@ -16,21 +18,21 @@ const Services = () => {
 				<div className='lg:w-[60%]'>
 					<div className='lg:flex gap-[10px] items-center'>
 						<p className='font-black text-3xl lg:text-5xl'>
-							Empowering Your <br />
-							Digital Vision
+							Our Comprehensive <br />
+							Digital Solutions
 						</p>
 						<img src={img} alt='' className='w-[200px]' />
 					</div>
 					<p className='text-[#676665] my-[30px]'>
-						At NexGen, we are committed to empowering your digital vision with
-						innovative solutions tailored to your unique needs. Our team of
-						skilled professionals, coupled with cutting-edge technologies,
-						ensures that we deliver exceptional results that elevate your online
-						presence.
+						At NexGen, we offer a comprehensive suite of digital solutions
+						designed to propel your business to new heights in the digital
+						realm. With a team of skilled professionals, cutting-edge
+						technologies, and a passion for innovation
 					</p>
+          <img src={follow1} alt="" className='h-[80px]'/>
 				</div>
-				<div>
-					<img src={mainbg} alt='' />
+				<div className='w-[35%]'>
+					<img src={mainbg} alt=''/>
 				</div>
 			</div>
 			<Card />
